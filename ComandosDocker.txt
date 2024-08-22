@@ -1,0 +1,20 @@
+Comandos Docker
+
+docker-compose up -d
+docker-compose down
+
+
+# Eliminar todos los contenedores
+docker rm -f $(docker ps -aq)
+
+# Eliminar todas las imágenes
+docker rmi -f $(docker images -aq)
+
+# Eliminar todos los volúmenes
+docker volume rm $(docker volume ls -q)
+
+# Eliminar todas las redes
+docker network rm $(docker network ls -q)
+
+
+psql -h localhost -U admin -d desarrollo
